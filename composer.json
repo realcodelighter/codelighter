@@ -8,7 +8,7 @@
             "CodeLighter\\": ["src/"]
         },
         "files": [
-            "framework/Functions.php"
+            "src/Functions.php"
         ]
     }
 }
