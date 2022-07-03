@@ -274,13 +274,13 @@ function uncache($f)
     $FILE_name = array_pop($FILE_NAMES);
     $FILE_NAMES = implode('/', $FILE_NAMES);
 
-    $FILE = DIR . $FILE_NAMES."/".md5($FILE_name.".min.js").'.Slim.js';
+    $FILE = DIR . $FILE_NAMES."/".md5($FILE_name.".min.js").'.CodeLighter.js';
     if (is_file($FILE) && is_readable($FILE) && filesize($FILE) != 0)
-        return $FILE_NAMES."/".md5($FILE_name.".min.js").'.Slim.js'. '?' . md6(filemtime($FILE));
+        return $FILE_NAMES."/".md5($FILE_name.".min.js").'.CodeLighter.js'. '?' . md6(filemtime($FILE));
 
-    $FILE = DIR . $FILE_NAMES."/".md5($FILE_name.".min.css").'.Slim.css';
+    $FILE = DIR . $FILE_NAMES."/".md5($FILE_name.".min.css").'.CodeLighter.css';
     if (is_file($FILE) && is_readable($FILE) && filesize($FILE) != 0)
-        return $FILE_NAMES."/".md5($FILE_name.".min.css").'.Slim.css'.'?' . md6(filemtime($FILE));
+        return $FILE_NAMES."/".md5($FILE_name.".min.css").'.CodeLighter.css'.'?' . md6(filemtime($FILE));
 
     $FILE = DIR . $f;
     if (is_file($FILE) && is_readable($FILE) && filesize($FILE) != 0)

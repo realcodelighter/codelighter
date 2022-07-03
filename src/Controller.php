@@ -1,6 +1,6 @@
 <?php
 
-namespace Slim;
+namespace CodeLighter;
 
 class Controller
 {

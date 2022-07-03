@@ -1,8 +1,8 @@
 <?php
 
-namespace Slim;
+namespace CodeLighter;
 
-class Stylesheet
+class Javascript
 {
     static $ss = [];
     static function add($n, $h)
@@ -11,8 +11,8 @@ class Stylesheet
     }
     static function page($d)
     {
-        if (!$d['style']) return false;
-        foreach ($d['style'] as $s)
+        if (!$d['script']) return false;
+        foreach ($d['script'] as $s)
             $ss[] = self::$ss[$s];
         foreach ($ss as $s)
             if (is_array($s['href']))
@@ -20,11 +20,11 @@ class Stylesheet
                     $e[] = $s['ext'] ? $b :  uncache($b);
             else
                 $e[] = $s['ext'] ? $s['href'] :  uncache($s['href']);
-        $e[] = getFile('/public/styles/' . $d['view'] . '.css');
-        $e[] = getFile('/public/styles/' . $d['view'] . '/' . $d['page'] . '.css');
+        $e[] = getFile('/public/scripts/' . $d['view'] . '.js');
+        $e[] = getFile('/public/scripts/' . $d['view'] . '/' . $d['page'] . '.js');
         // $e = array_unique($e);
         // echo PHP_EOL;
         foreach ($e as $s)
-            if ($s !== false) echo '<link rel="stylesheet" href="' . $s . '">' . PHP_EOL;
+            if ($s !== false) echo '<script defer src="' . $s . '"></script>' . PHP_EOL;
     }
 }

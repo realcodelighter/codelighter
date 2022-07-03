@@ -1,12 +1,12 @@
 <?php
 
-namespace Slim;
+namespace CodeLighter;
 
 class Core
 {
     static function init($data = [])
     {
-        $url = isset($_GET['Slim']) ? explode('/', filter_var(rtrim($_GET['Slim'] ?? [], '/'), FILTER_SANITIZE_URL)) : [];
+        $url = isset($_GET['CodeLighter']) ? explode('/', filter_var(rtrim($_GET['CodeLighter'] ?? [], '/'), FILTER_SANITIZE_URL)) : [];
         foreach ($data['css'] as $css)
             Stylesheet::add($css[0], $css[1]);
 
