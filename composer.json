@@ -4,6 +4,11 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "psr-4": { "CodeLighter\\": ["src/"] }
+        "psr-4": {
+            "CodeLighter\\": ["src/"]
+        },
+        "files": [
+            "framework/Functions.php"
+        ]
     }
 }
