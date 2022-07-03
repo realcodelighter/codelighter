@@ -4,13 +4,8 @@ namespace CodeLighter;
 
 class Controller
 {
-    protected $DB;
     protected $data = [];
 
-    function DB()
-    {
-        $this->DB = new Helper\Database();
-    }
     function model($model)
     {
         $run = '\\Model\\' . $model;
