@@ -1,0 +1,8 @@
+{
+    "name": "realcodelighter/codelighter",
+    "description": "CodeLighter 1.0",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {}
+}
